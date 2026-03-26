@@ -10,7 +10,7 @@ class Planet {
   float diameter;   // Size of planet
   float distance;   // Distance from sun
   float orbitspeed; // Orbit speed
-  color fillcolor = color((int) random(0, 256), (int) random(0, 256), (int) random(0, 256)); // (int) random(0, 256) generates a random integer number between 0 and 5 (including 5)
+  color fillcolor = color((int) random(0, 256), (int) random(0, 256), (int) random(0, 256)); // (int) random(0, 256) generates a random integer number between 0 and 256 (starting at zero, and up to, but not including, 256)
  
   // Each Planet now has a Moon!
   Moon[] moons;
