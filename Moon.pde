@@ -10,10 +10,12 @@ class Moon {
   float diameter;   // Size of planet
   float distance;   // Distance from sun
   float orbitspeed; // Orbit speed
+  color fillcolor;
   
-  Moon(float distance_, float diameter_) {
+  Moon(float distance_, float diameter_, color fillcolor_) {
     distance = distance_;
     diameter = diameter_;
+    fillcolor = fillcolor_;
     theta = 0;
     orbitspeed = random(-0.1,0.1);
   }
@@ -31,7 +33,7 @@ class Moon {
     // translate out distance
     translate(distance,0); 
     stroke(0);
-    fill(175);
+    fill(fillcolor);
     ellipse(0,0,diameter,diameter);
     // Once the planet is drawn, the matrix is restored with popMatrix() so that the next planet is not affected.
     popMatrix(); 

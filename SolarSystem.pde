@@ -10,11 +10,11 @@
 Planet[] planets = new Planet[3];
 
 void setup() {
-  size(480, 270);
+  size(800, 600);
 
   // The planet objects are initialized using the counter variable
   for (int i = 0; i < planets.length; i++ ) {
-    planets[i] = new Planet(60 + i*36, 24);
+    planets[i] = new Planet(60 + i*36, 24, 1 + i % 2); // The expression 1 + i % 2, ensures that only the second planet will have two moons (when planet.length equals 3)
   }
 }
 
