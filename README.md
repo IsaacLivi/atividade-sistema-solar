@@ -2,6 +2,10 @@
 
 Atividade Prática – Sistema Solar com Planetas e Luas
 
+## Etapa 1
+
+![Diagrama](etapas/etapa1.png)
+
 ## Etapa 2
 
 - O método `draw()` é executado em loop, chamando `update()` para cada planeta. Cada um deles atualiza seu próprio theta e então chama o `update()` da sua respectiva lua.
