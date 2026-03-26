@@ -1,6 +1,8 @@
-# atividade-sistema-solar
+# Atividade sistema Solar
 
 Atividade Prática – Sistema Solar com Planetas e Luas
+
+> Integrantes: Isaac Livi dos Santos e Lucas Vezaro Tonolli
 
 ## Etapa 1
 
