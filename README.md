@@ -19,7 +19,7 @@ Atividade Prática – Sistema Solar com Planetas e Luas
 
 1. **Onde aplicamos pushMatrix()/popMatrix() e por quê?**
 
-- No `draw()` da Classe _SolarSystem_: isola o translate do Sol para o centro da tela
+- No `draw()` do arquivo _SolarSystem_: isola o translate do Sol para o centro da tela
 - Em `Planet.display()` : isola as transformações de cada planeta
 - Em `Moon.display()`: isola as transformações de cada lua
 - Motivo: cada `popMatrix()` "desfaz" as transformações, evitando que um objeto afete o próximo.
