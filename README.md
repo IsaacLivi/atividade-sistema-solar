@@ -12,23 +12,19 @@ Atividade Prática – Sistema Solar com Planetas e Luas
 
 - O método `draw()` é executado em loop, chamando `update()` para cada planeta. Cada um deles atualiza seu próprio theta e então chama o `update()` da sua respectiva lua.
 - A variável _theta_ é incrementada ou decrementada dentro do método `update()` de ambas as classes, através da instrução `theta += orbitspeed;`.
-- A variável _orbitspeed_ define a taxa de variação do ângulo a cada quadro de animação, atuando como a velocidade angular. Sendo assim, quanto maior o valor absoluto de _orbitspeed_, mais rápido o objeto completará sua órbita.
+- `orbitspeed` controla o quanto `theta` avança por quadro — quanto maior o valor absoluto, mais rápida a volta completa.
 - A classe _Planet_ define sua _orbitspeed_ sempre com valores positivos, variando de 0.01 a 0.03, enquanto a classe _Moon_ possui uma velocidade aleatória entre -0.1 e 0.1. Como o sistema de coordenadas do Processing tem o eixo Y apontando para baixo, valores positivos de rotação geram um movimento no sentido horário e valores negativos geram movimento no sentido anti-horário.
 
 ## Etapa 4
 
 1. **Onde aplicamos pushMatrix()/popMatrix() e por quê?**
 
-- No `draw()` do arquivo _SolarSystem_: isola o translate do Sol para o centro da tela
-- Em `Planet.display()` : isola as transformações de cada planeta
-- Em `Moon.display()`: isola as transformações de cada lua
-- Motivo: cada `popMatrix()` "desfaz" as transformações, evitando que um objeto afete o próximo.
+- No `draw()` do _SolarSystem_: salva o estado antes do `translate` para o centro, assim os planetas partem sempre do mesmo ponto.
+- Em `Planet.display()` e `Moon.display()`: cada objeto salva e restaura o estado da matriz ao redor de suas próprias transformações, evitando que um planeta ou lua afete o posicionamento do seguinte.
 
 2. **O que mudaria se invertêssemos rotate() e translate() no planeta ou na lua**
 
-- Ao inverter a ordem de execução no Planeta, os planetas não fazem o movimento da órbita.
-- Ao inverter a ordem de execução na Lua, as luas não se mexem em órbita, só acompanhariam o planeta.
-- Basicamente ao inverter os elementos giram em torno do proprio eixo.
+- Se trocarmos a ordem, o objeto passa a girar em volta de si mesmo em vez de orbitar: o `translate` desloca para uma posição fixa, e o `rotate` gira em torno desse ponto — não em torno da origem (Sol ou planeta-pai).
 
 3. **Como garantimos órbitas independentes?**
 
