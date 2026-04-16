@@ -2,7 +2,7 @@
 
 Atividade Prática – Sistema Solar com Planetas e Luas
 
-> Integrantes: Isaac Livi dos Santos e Lucas Vezaro Tonolli
+> Integrantes: Isaac Lívi dos Santos e Lucas Vezaro Tonolli
 
 ## Etapa 1
 
