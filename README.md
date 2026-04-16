@@ -24,7 +24,7 @@ Atividade Prática – Sistema Solar com Planetas e Luas
 
 2. **O que mudaria se invertêssemos rotate() e translate() no planeta ou na lua**
 
-- Se trocarmos a ordem, o objeto passa a girar em volta de si mesmo em vez de orbitar: o `translate` desloca para uma posição fixa, e o `rotate` gira em torno desse ponto — não em torno da origem (Sol ou planeta-pai).
+- Se trocarmos a ordem das transformações, o objeto deixa de orbitar o centro e passa a girar em torno do próprio eixo, pois primeiro é deslocado para uma posição fixa (`translate`) e depois rotacionado (`rotate`) nesse novo referencial.
 
 3. **Como garantimos órbitas independentes?**
 
